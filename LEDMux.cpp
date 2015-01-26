@@ -581,7 +581,11 @@ void LEDMux::update()
     }
 }
 
+#if (ARDUINO >= 100)
+size_t LEDMux::write(uint8_t c)
+#else
 void LEDMux::write(uint8_t c)
+#endif
 {
     int i;
     switch(c) {
@@ -602,14 +606,24 @@ void LEDMux::write(uint8_t c)
             }
             break;
     }
+#if (ARDUINO >= 100)
+    return 1;
+#endif
 }
 
+#if (ARDUINO >= 100)
+size_t LEDMux::write(char *s, int c)
+#else
 void LEDMux::write(char *s, int c)
+#endif
 {
     int i;
     for (i=0; i<c; i++) {
         this->write(s[i]);
     }
+#if (ARDUINO >= 100)
+    return c;
+#endif
 }
 
 void LEDMux::setBrightness(unsigned char b)

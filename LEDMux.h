@@ -47,8 +47,13 @@ class LEDMux : public Print
         void setCathodes(unsigned char c0, unsigned char c1, unsigned char c2, unsigned char c3, unsigned char c4, unsigned char c5);
         void setCathodes(unsigned char c0, unsigned char c1, unsigned char c2, unsigned char c3, unsigned char c4, unsigned char c5, unsigned char c6);
         void setCathodes(unsigned char c0, unsigned char c1, unsigned char c2, unsigned char c3, unsigned char c4, unsigned char c5, unsigned char c6, unsigned char c7);
+#if (ARDUINO >= 100)
+        virtual size_t write(uint8_t c);
+        virtual size_t write(char *s, int c);
+#else
         virtual void write(uint8_t c);
         virtual void write(char *s, int c);
+#endif
 
         void setBrightness(unsigned char);
         void setBrightness(unsigned char, unsigned char);
