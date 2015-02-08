@@ -9,6 +9,7 @@ Standards-Version: 3.9.4
 
 Package: libledmux-chipkit
 Architecture: all
+Provides: LEDMux.h
 Depends: chipkit
 Description: LEDMux library for chipkit
 
