@@ -2,6 +2,7 @@ Source: libledmux-chipkit
 Section: libraries
 Priority: extra
 XBSC-Group: Display
+XBSC-Subgroup: LED
 XBSC-Family: pic32
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 Build-Depends: debhelper (>= 8.0.0)
