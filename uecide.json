@@ -7,9 +7,9 @@
     "category": "Display",
     "subcategory": "LED",
     "maintainer": "Matt Jenkins <matt@majenko.co.uk>",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "family": "pic32",
-    "core": "chipKIT",
+    "core": "chipkit",
     "install": {
         "LEDMux.cpp": "/",
         "LEDMux.h": "/"
