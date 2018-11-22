@@ -1,0 +1,17 @@
+{
+    "name": "LEDMux",
+    "provides": "LEDMux.h",
+    "license": "LICENSE.md",
+    "readme": "README.md",
+    "description": "Timer-based LED Display multiplexer for chipKIT",
+    "category": "Display",
+    "subcategory": "LED",
+    "maintainer": "Matt Jenkins <matt@majenko.co.uk>",
+    "version": "1.0.0",
+    "family": "pic32",
+    "core": "chipKIT",
+    "install": {
+        "LEDMux.cpp": "/",
+        "LEDMux.h": "/"
+    }
+}
